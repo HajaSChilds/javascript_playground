@@ -1,7 +1,7 @@
 const crewmembers = [
  'Alex Kamal',
  'James Holden',
- 'Naomi Nagata',
+ 'Naomi Nagata'
 ];
 
 const [pilot, captain, engineer] = crewmembers;
