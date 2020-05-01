@@ -1,5 +1,5 @@
 class Instructor {
-    constructor({name, role = 'assistant'}) {
+    constructor({name, role = 'Assistant'}) {
         this.name = name;
         this.role = role;
     }
