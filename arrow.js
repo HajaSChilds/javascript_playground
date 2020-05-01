@@ -9,5 +9,3 @@ function DinnerBill(meal1,meal2) {
 
 const mybill = new DinnerBill(35.00, 40.00);
 console.log(mybill);
-
-
