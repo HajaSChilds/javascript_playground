@@ -17,3 +17,5 @@ postsPromise
 .catch((error) => {
     console.log(error);
 });
+
+// DOES NOT WORK AS FETCH IS NOT DEFINED IN VS CODE.  ITS A BROWSER COMMAND
