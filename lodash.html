@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lodash #2 Lecture</title>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
+</head>
+<body>
+    
+</body>
+
+<script>
+ /*   //keyby
+    const roster = [
+            { position: '3B', name: 'Bregman, A' },
+            { position: '2B', name: 'Altuve, J' },
+            { position: 'CF', name: 'Springer, G' },
+            { position: '1B', name: 'Gurriel, Y' },
+            { position: 'LF', name: 'Gonzalez, M' }
+        ]
+
+        const positions = _.keyBy(roster, 'position');
+        console.log(positions);
+
+        const secondBase = positions['2B'];
+        const thirdBase = positions['3B'];
+
+        console.log(thirdBase)*/
+
+      /*  //reduce
+        const links = [
+            "https://google.com",
+            "https://devcamp.com",
+            "https://airbnb.com"
+        ];
+
+        const webLinks = _.reduce(links, function(content, link ){
+            return `<a href='${link}'>${link}</a><br>`.concat(content)
+        }, ''); 
+
+        console.log(webLinks); */
+
+        //random 
+
+        randNumber = () => {
+            return _.random(1, 100);                                                                                                                                      
+        }
+
+        const lodashSampleNumbers = _.times(5, randNumber);
+
+        console.log(lodashSampleNumbers);
+
+        
+</script>
+</html>
