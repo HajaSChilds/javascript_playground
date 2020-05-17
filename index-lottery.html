@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const weights = {
+            redball: 3,
+            greenball: 1,
+            blackball: 6,
+        };
+
+        const weightedLottery = weights => {
+
+            // Create an array with the values represented as a frequency
+
+            const keysArray = Object.keys(weights);
+            const valuesArray = Object.values(weights);
+            let index = 0;
+
+
+            for (key of keysArray) {
+                // Get the index of the keys array to match the values array
+                let newArray = [];
+                transformedArray = miniArray(key);
+                newArray.push(miniArray(key));
+                console.log(newArray);
+
+
+                // Use the index of the values array to get the value to run the loop 
+
+                function miniArray(key) {
+                    let index = keysArray.indexOf(key);
+                    let number = valuesArray[index];
+                    let transformedArray = [];
+                    for (i = 0; i < number; i++) {
+                        transformedArray.push(key);
+                    }
+                    return transformedArray;
+                }
+
+            }
+
+
+        }
+
+        // Generate random index number from the array
+        // Return value from the array
+
+
+        console.log(weightedLottery(weights));
+</script>
+</html>

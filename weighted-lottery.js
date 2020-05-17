@@ -14,41 +14,57 @@ const weights = {
 };
 
 const weightedLottery = weights => {
+
+  newArray = bigArray(weights);
+  console.log(newArray);
    
 // Create an array with the values represented as a frequency
-   
-    const keysArray = Object.keys(weights);
-    const valuesArray = Object.values(weights);
-    let index = 0;
-    
-    
-    for (key of keysArray) {
-        // Get the index of the keys array to match the values array
-        let newArray = [];
-        transformedArray = miniArray(key);
-        newArray.push(miniArray(key));
-        console.log(newArray);
+
+   function bigArray(weights){
+      const keysArray = Object.keys(weights);
+      const valuesArray = Object.values(weights);
+      let index = 0;
+      
+      
+      for (key of keysArray) {
+          // Get the index of the keys array to match the values array
+          let finalArray = [];
+          let newArray = [];
+          transformedArray = miniArray(key);
+          newArray.push(miniArray(key));
+          return newArray;  
+          
+      
+          
 
 
-        // Use the index of the values array to get the value to run the loop 
-       
-       function miniArray(key) {
-         let index = keysArray.indexOf(key);
-         let number = valuesArray[index];
-         let transformedArray = [];
-         for (i = 0; i < number; i++) {
-           transformedArray.push(key);
-         }
-         return transformedArray;
-       }         
+          // Use the index of the values array to get the value to run the loop 
+        
+        function miniArray(key) {
+          let index = keysArray.indexOf(key);
+          let number = valuesArray[index];
+          let transformedArray = [];
+          for (i = 0; i < number; i++) {
+            transformedArray.push(key);
+          }
+          return transformedArray;
+        }     
+        
+          
+      
+  // Generate random index number from the array
+    //let selection = finalArray[Math.floor(Math.random() * finalArray.length)];
 
+  // Return value from the array
+  //return selection;
+
+    }
    }
+    
        
    
 }
 
-// Generate random index number from the array
-// Return value from the array
     
 
 console.log(weightedLottery(weights));
