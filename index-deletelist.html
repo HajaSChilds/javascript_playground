@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="todos">
+        <h2>Pending Todos</h2>
+        <ul>
+            <li class="todoItem" type="button" onclick= "deleteTodo()" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, doloribus.</li>
+            <li class="todoItem" type="button" onclick= "deleteTodo()">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li class="todoItem" type="button" onclick= "deleteTodo()">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim, pariatur.</li>
+            <li class="todoItem" type="button" onclick= "deleteTodo()">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li class="todoItem" type="button" onclick= "deleteTodo()">Lorem ipsum dolor sit amet consectetur adipisicing elit. In, tenetur!</li>
+        </ul>
+    </div>
+
+    <h2>Completed Todos</h2>
+    <ul class="completedTodoWrapper">
+        <div class="completed-footer"></div>
+    </ul>
+    
+</body>
+    <script>
+        function deleteTodo (){
+         const finishedTodos = document.querySelector('.todoItem').this;
+         console.log(`I clicked ${finishedTodos}`);
+             
+            
+        }
+
+    </script>
+</html>
