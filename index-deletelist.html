@@ -9,11 +9,11 @@
     <div class="todos">
         <h2>Pending Todos</h2>
         <ul>
-            <li class="todoItem" type="button" onclick= "deleteTodo()" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, doloribus.</li>
-            <li class="todoItem" type="button" onclick= "deleteTodo()">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-            <li class="todoItem" type="button" onclick= "deleteTodo()">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim, pariatur.</li>
-            <li class="todoItem" type="button" onclick= "deleteTodo()">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-            <li class="todoItem" type="button" onclick= "deleteTodo()">Lorem ipsum dolor sit amet consectetur adipisicing elit. In, tenetur!</li>
+            <li class="todoItem" type="button">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, doloribus.</li>
+            <li class="todoItem" type="button">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li class="todoItem" type="button">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim, pariatur.</li>
+            <li class="todoItem" type="button">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li class="todoItem" type="button">Lorem ipsum dolor sit amet consectetur adipisicing elit. In, tenetur!</li>
         </ul>
     </div>
 
@@ -24,12 +24,28 @@
     
 </body>
     <script>
-        function deleteTodo (){
-         const finishedTodos = document.querySelector('.todoItem').this;
-         console.log(`I clicked ${finishedTodos}`);
-             
+        const pendingTodos = document.querySelectorAll('.todoItem');
+
+        pendingTodos.forEach(pendingTodo => pendingTodo.addEventListener("click", event => {
+           completeTodo(pendingTodo);
+                
+        }))
+
+        function completeTodo(pendingTodo) {
+          
+          const newCompleted = document.createElement('li')
+          newCompleted.classList.add('doneItem');
+          const doneText = document.createTextNode(pendingTodo.innerHTML);
+          newCompleted.appendChild(doneText);
+
+          const base = document.querySelector('.completed-footer');
+          const element = document.querySelector('.completedTodoWrapper');
+          element.insertBefore(newCompleted,base) ;
+          
+          pendingTodo.remove()
             
         }
+
 
     </script>
 </html>
