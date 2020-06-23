@@ -20,7 +20,7 @@
 
         const weights = {
             redball: 3,
-            greenball: 1,
+            greenball: 5,
             blackball: 6,
         };
 
@@ -30,51 +30,35 @@
 
             // Create an array with the values represented as a frequency
 
-        
+                let bigArray = [];
                 const keysArray = Object.keys(weights);
                 const valuesArray = Object.values(weights);
                 let index = 0;
 
 
-                for (key of keysArray) {
-                    // Get the index of the keys array to match the values array
-                    let bigArray = [];
-                    let newArray = [];
-                    newArray = newArray.push(miniArray(key));
-                    
-                    
-
-
-
-
-
-                    // Use the index of the values array to get the value to run the loop 
-
-                    function miniArray(key) {
-                        let index = keysArray.indexOf(key);
-                        let number = valuesArray[index];
-                        let transformedArray = [];
-                        for (i = 0; i < number; i++) {
-                            transformedArray.push(key);
-                        }
-                        return transformedArray;
+                keysArray.forEach(key => {
+                    for(let i = 0; i < weights[key]; i++) {
+                           bigArray.push(key);      
                     }
+                 
+                });
+                console.log(bigArray);
+                return bigArray;
+                    
+                
 
 
+
+                
 
                     // Generate random index number from the array
-                    //let selection = finalArray[Math.floor(Math.random() * finalArray.length)];
+                let selection = bigArray[Math.floor(Math.random() * bigArray.length) | 0];
 
                     // Return value from the array
-                    //return selection;
+                return selection;
 
                 }
-            }
-
-
-
-     
-
+            
 
 
         console.log(weightedLottery(weights));
